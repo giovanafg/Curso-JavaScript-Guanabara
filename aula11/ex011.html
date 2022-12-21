@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: rgb(230, 13, 122);
+            font-size: 20px;
+            color: white;
+        }
+        h1 {
+            color: white;
+        }
+        .botao {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Países: conferindo se você é estrangeiro</h1>
+    Em que país você nasceu? <input type="text" id="birthPlace">
+    <input class="botao" type="button" value="Checar se você é estrangeiro" onclick="checkBirthPlace()">
+    <div id="res">
+
+    </div>
+<script>
+   function checkBirthPlace() {
+    var countryName = document.querySelector("input#birthPlace")
+    var res= document.querySelector("div#res")
+
+    if (countryName.value == "Brasil") {
+        res.innerHTML ="Você é Brasileiro!"
+    }
+    else {
+        res.innerHTML =`Você nasceu em um país chamado <strong>${countryName.value}</strong> logo você é estrangeiro `
+    }
+    
+   }
+    
+</script>
+
+</body>
+</html>
